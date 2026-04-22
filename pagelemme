@@ -188,21 +188,23 @@ button,a{cursor:pointer;text-decoration:none;color:inherit}
 /* ═══ BA CAROUSEL ═══ */
 #ba{padding:5rem 0;background:var(--bg2)}
 .baw{position:relative;overflow:hidden;margin-top:2.5rem;padding:0 .5rem}
-.bat{display:flex;transition:transform .85s cubic-bezier(.25,.1,.25,1)}
-.bas{flex-shrink:0;padding:0 .5rem;box-sizing:border-box}
-@media(min-width:901px){.bas{width:33.333%}}
-@media(min-width:601px) and (max-width:900px){.bas{width:50%}}
-@media(max-width:600px){.bas{width:100%}}
-.bac{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--b1);position:relative;transition:border-color .3s}
-.bac:hover{border-color:rgba(255,107,53,.35)}
-.bai{aspect-ratio:4/5;overflow:hidden;position:relative;background:#090612}
-.ba-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(28px) saturate(1.05);transform:scale(1.12);opacity:.38}
-.ba-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,14,.08),rgba(6,6,14,.34))}
-.ba-media{position:relative;z-index:1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:.8rem}
-.bai img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center;display:block;transition:transform .6s}
-.bac:hover .ba-media img{transform:scale(1.03)}
+.bat{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:0}
+.bat::-webkit-scrollbar{display:none}
+.bas{flex:0 0 100%;min-width:0;padding:0 .5rem;box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always}
+@media(min-width:901px){.bas{flex-basis:33.333%}}
+@media(min-width:601px) and (max-width:900px){.bas{flex-basis:50%}}
+@media(max-width:600px){.bas{flex-basis:100%}}
+.bac{height:100%;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:var(--card);border:1px solid var(--b1);position:relative;transition:border-color .3s,transform .3s}
+.bac:hover{border-color:rgba(255,107,53,.35);transform:translateY(-2px)}
+.bai{aspect-ratio:1/1.14;overflow:hidden;position:relative;background:#090612;display:flex;align-items:center;justify-content:center}
+.ba-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(28px) saturate(1.05);transform:scale(1.12);opacity:.34}
+.ba-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,14,.04),rgba(6,6,14,.28))}
+.ba-media{position:relative;z-index:1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:.65rem}
+.bai img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;transition:transform .6s}
+.bac:hover .ba-media img{transform:scale(1.02)}
 .bph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}
-.bin{padding:1.1rem 1.25rem}
+.bin{padding:1.1rem 1.25rem 1.2rem}
+@media(max-width:600px){.bin{padding:1rem 1.05rem 1.15rem}.bin p:last-child{font-size:.82rem;line-height:1.55}}
 
 /* ═══ HOW IT WORKS ═══ */
 .sw{aspect-ratio:1;position:relative;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;background:transparent;overflow:visible}
@@ -258,13 +260,14 @@ button,a{cursor:pointer;text-decoration:none;color:inherit}
 .pmeses{font-family:var(--dp);font-size:3.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
 .pmeses-lbl{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);text-align:center;margin-bottom:1rem}
 .pppu{font-size:.78rem;color:var(--mu);text-align:center;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--b1)}
-.pprice{font-family:var(--dp);font-size:2.3rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
-.pwas2{text-decoration:line-through;color:var(--mu);font-size:.88rem;text-align:center}
+.pprice{display:block;position:relative;font-family:var(--dp);font-size:2.3rem;font-weight:900;line-height:1.14;white-space:nowrap;padding:.08em .08em .03em;overflow:visible;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+.pwas2{display:block;text-decoration:line-through;color:var(--mu);font-size:.88rem;line-height:1.15;text-align:center;margin-bottom:.12rem}
 .psave{display:inline-block;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#4ade80;border-radius:100px;padding:4px 14px;font-size:.72rem;font-weight:700;margin:.4rem auto 1.25rem;display:block;text-align:center}
 .pfeats{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;flex:1}
 .pfeats li{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--mu)}
 .pfeats li span{color:var(--tx)}
 .pfi2{width:17px;height:17px;border-radius:50%;background:linear-gradient(135deg,var(--fi),var(--vi));flex-shrink:0;display:flex;align-items:center;justify-content:center}
+@media(max-width:600px){.pbody{padding:1.35rem 1.15rem 1.7rem}.pmeses{font-size:3.15rem}.pprice{font-size:2.08rem;line-height:1.16;padding:.1em .06em .04em}.pwas2{font-size:.84rem}.psave{font-size:.68rem;padding:4px 12px}}
 /* center card accent line top */
 .pc-c::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--vi),var(--fi),var(--go));z-index:3}
 .codbanner{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;margin-bottom:3rem;flex-wrap:wrap}
@@ -863,7 +866,8 @@ function buildHC() {
 function buildBC() {
   const t = document.getElementById('btr');
   const d = document.getElementById('bdots');
-  const gv = () => window.innerWidth >= 901 ? 3 : window.innerWidth >= 601 ? 2 : 1;
+  t.innerHTML = '';
+
   C.BA.forEach((it, i) => {
     const s = document.createElement('div');
     s.className = 'bas';
@@ -873,12 +877,75 @@ function buildBC() {
     }</div><div class="bin"><div class="stars" style="font-size:.8rem;margin-bottom:.35rem">★★★★★</div><p style="font-weight:700;font-size:.86rem;margin-bottom:.3rem">${it.n} · ${it.c}</p><p style="font-size:.8rem;color:var(--mu);line-height:1.6">"${it.t}"</p></div></div>`;
     t.appendChild(s);
   });
-  BC = new Car(t, d, { iv: 6000, vis: gv() });
-  let rt;
+
+  const slides = Array.from(t.children);
+  const perView = () => window.innerWidth >= 901 ? 3 : window.innerWidth >= 601 ? 2 : 1;
+  let group = perView();
+  let scrollTimer;
+  let resizeTimer;
+
+  const pageCount = () => Math.max(1, Math.ceil(slides.length / group));
+  const clampPage = p => Math.max(0, Math.min(p, pageCount() - 1));
+  const slideIndexForPage = p => Math.min(slides.length - 1, clampPage(p) * group);
+
+  function buildDots() {
+    d.innerHTML = '';
+    for (let i = 0; i < pageCount(); i++) {
+      const btn = document.createElement('button');
+      btn.className = 'dot' + (i === 0 ? ' on' : '');
+      btn.type = 'button';
+      btn.addEventListener('click', () => scrollToPage(i));
+      d.appendChild(btn);
+    }
+  }
+
+  function currentPage() {
+    let nearestIndex = 0;
+    let nearestDistance = Infinity;
+    slides.forEach((slide, i) => {
+      const dist = Math.abs(t.scrollLeft - slide.offsetLeft);
+      if (dist < nearestDistance) {
+        nearestDistance = dist;
+        nearestIndex = i;
+      }
+    });
+    return clampPage(Math.floor(nearestIndex / group));
+  }
+
+  function updateDots(active = currentPage()) {
+    d.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('on', i === active));
+  }
+
+  function scrollToPage(page, smooth = true) {
+    const idx = slideIndexForPage(page);
+    const target = slides[idx];
+    if (!target) return;
+    t.scrollTo({ left: target.offsetLeft, behavior: smooth ? 'smooth' : 'auto' });
+    updateDots(clampPage(page));
+  }
+
+  BC = {
+    next() { scrollToPage(currentPage() + 1); },
+    prev() { scrollToPage(currentPage() - 1); }
+  };
+
+  t.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => updateDots(), 80);
+  }, { passive: true });
+
   window.addEventListener('resize', () => {
-    clearTimeout(rt);
-    rt = setTimeout(() => { const v = gv(); BC.rebuild(v); }, 200);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const page = currentPage();
+      group = perView();
+      buildDots();
+      scrollToPage(page, false);
+    }, 150);
   });
+
+  buildDots();
+  requestAnimationFrame(() => scrollToPage(0, false));
 }
 
 function buildIng() {
