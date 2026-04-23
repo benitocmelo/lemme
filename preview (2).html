@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>SLIM BURN PRO · El Original · Colombia</title>
+<script>
+/* ══════════════════════════════════════════════
+   CONFIGURA AQUÍ — solo este bloque
+══════════════════════════════════════════════ */
+const C = {
+  PIXEL:   "1120289693245495",
+  WA_NUM:  "573XXXXXXXXX",
+  WA_MSG:  "Hola! Quiero pedir SLIM BURN PRO.",
+  PLANES: [
+    { meses:1, frascos:1, precio:"$99.900",  antes:"$149.900", ahorra:"$50.000",  tag:"",              ppu:"$99.900/frasco", img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_a-hyperrealistic-highly-d_2843809772.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2EtaHlwZXJyZWFsaXN0aWMtaGlnaGx5LWRfMjg0MzgwOTc3Mi5wbmciLCJpYXQiOjE3NzY4ODEwMzUsImV4cCI6MTgwODQxNzAzNX0.hzctDWPXmoEih3AH1tDft5yEDLdCs5QoJym5qyc8k7s" },
+    { meses:2, frascos:2, precio:"$169.900", antes:"$299.800", ahorra:"$129.900", tag:"MÁS POPULAR",   ppu:"$84.950/frasco", img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_a-dynamic-dynamic-3d-prod_2843813295.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2EtZHluYW1pYy1keW5hbWljLTNkLXByb2RfMjg0MzgxMzI5NS5wbmciLCJpYXQiOjE3NzY4ODEwNzQsImV4cCI6MTgwODQxNzA3NH0.Pd7c3y7jIs-ysAl_G8Cf1DHkmhq5RNnCX4P1X4Wu9O8" },
+    { meses:3, frascos:3, precio:"$239.900", antes:"$449.700", ahorra:"$209.800", tag:"MEJOR PRECIO",  ppu:"$79.967/frasco", img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_a-complex-and-rich-3d-pro_2843814563.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2EtY29tcGxleC1hbmQtcmljaC0zZC1wcm9fMjg0MzgxNDU2My5wbmciLCJpYXQiOjE3NzY4ODEwODYsImV4cCI6MTgwODQxNzA4Nn0.4CyFdxwJDEgvsLk_Vr1QexQBFC8i9mXZdhJw5zD2XEk" },
+  ],
+  // img: URL directa a la imagen de 1, 2 y 3 tarros respectivamente
+  FOTOS: [
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_224_Open-bottle_burn_0c5d56b2-3102-4e44-8308-52a5028164b4_1600x.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzIyNF9PcGVuLWJvdHRsZV9idXJuXzBjNWQ1NmIyLTMxMDItNGU0NC04MzA4LTUyYTUwMjgxNjRiNF8xNjAweC5wbmciLCJpYXQiOjE3NzY4NzUwMDQsImV4cCI6MTgwODQxMTAwNH0.TlLTdlxTMi6pZA90nPBDP8WDNPZNhwJ9Esd2ig1Fpn0",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2022%20abr%202026,%2011_21_34%20a.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIyIGFiciAyMDI2LCAxMV8yMV8zNCBhLm0uLnBuZyIsImlhdCI6MTc3Njg3NTEyMCwiZXhwIjoxODA4NDExMTIwfQ.zk6BOB1NNKvad0cB5K-NODDOal6JFpA0KI4Auu8SL8g",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_101_LemmeBurnAsset3.gif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzEwMV9MZW1tZUJ1cm5Bc3NldDMuZ2lmIiwiaWF0IjoxNzc2ODc1MDczLCJleHAiOjE4MDg0MTEwNzN9.WGmxJRYuEuWRCAsWo-9oUrKx3xmCAf-0Ac-ceG2b3HY",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_30_PDP_burn_3_FlavorProfile_1.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzMwX1BEUF9idXJuXzNfRmxhdm9yUHJvZmlsZV8xLnBuZyIsImlhdCI6MTc3Njg3NTA5NSwiZXhwIjoxODA4NDExMDk1fQ.A_gZRomd1IjFfx9cMjAsNfYaZoJdCWxVTqC095Y6kbQ"
+  ],
+  BA: [
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_23_53%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yM181MyBwLm0uLnBuZyIsImlhdCI6MTc3Njg3Mjc4MiwiZXhwIjoxODA4NDA4NzgyfQ.LBmHQYMFX7kVAFWt9DbLpyQEaLCxh_fVpvTeInfdwpg",n:"Alejandra M.",c:"Bogotá",t:"Lo primero que noté fue que me veía menos inflamada y la ropa volvió a quedarme bien. En pocas semanas ya me veía distinta."},
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_24_01%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yNF8wMSBwLm0uLnBuZyIsImlhdCI6MTc3Njg3Mjc5NCwiZXhwIjoxODA4NDA4Nzk0fQ.zdvu-fXkWK_ctqtHTQ3-Ft-43cNNkte7PKA1NKKDfpA",n:"Carolina V.",c:"Medellín",t:"No fue de un día para otro. Este cambio lo vi después de varios meses siendo constante, pero desde el primer tratamiento sí sentí menos ansiedad y menos hinchazón."},
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_24_08%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yNF8wOCBwLm0uLnBuZyIsImlhdCI6MTc3Njg3MjgwNSwiZXhwIjoxODA4NDA4ODA1fQ.PX-OmLMkvVMoLQZvf9nW27NKaZPsMZ5kyIg-zvBmR84",n:"Paola R.",c:"Cali",t:"Yo lo compré por curiosidad y terminé pidiendo más. Me ayudó a verme menos pesada del abdomen y eso se notó en la ropa."},
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_24_16%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yNF8xNiBwLm0uLnBuZyIsImlhdCI6MTc3Njg3MjgxNiwiZXhwIjoxODA4NDA4ODE2fQ.uibkQ14AnMot3VUioI6oVPhjivA2BEk4wekhhlnCyLQ",n:"Sandra O.",c:"Bucaramanga",t:"Con dos tratamientos seguidos sí noté un cambio serio. La barriga bajó bastante y dejé de sentirme tan inflamada todo el tiempo."},
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_24_27%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yNF8yNyBwLm0uLnBuZyIsImlhdCI6MTc3Njg3MjgzMSwiZXhwIjoxODA4NDA4ODMxfQ.PVXdEscPrh6UTXTfJhIWF3EY3Q4aFbs2g92ZzIdhS40",n:"Marcela T.",c:"Barranquilla",t:"Lo que más me gustó fue que el cambio se vio natural. Me sentí más liviana, más desinflamada y por eso pedí el segundo tratamiento."},
+    {img:"https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ChatGPT%20Image%2020%20abr%202026,%2003_24_33%20p.m..png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9DaGF0R1BUIEltYWdlIDIwIGFiciAyMDI2LCAwM18yNF8zMyBwLm0uLnBuZyIsImlhdCI6MTc3Njg3Mjg0MSwiZXhwIjoxODA4NDA4ODQxfQ.36S6okUws1q3MF6DBJRioIAH-tCkplC0VhnoPY6YI-Y",n:"Luisa F.",c:"Pereira",t:"Después del embarazo nada me ayudaba de verdad. Aquí sí empecé a notar cambio en la cintura y en cómo me quedaba la ropa."},
+  ],
+  SOCIAL_PROOF: [
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_hyper-realistic-smartphon_2760910000.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2h5cGVyLXJlYWxpc3RpYy1zbWFydHBob25fMjc2MDkxMDAwMC5wbmciLCJpYXQiOjE3NzY4ODU2OTUsImV4cCI6MTgwODQyMTY5NX0.da6PgdYwSrhBrjm5bzBUvizt3v5RCJOpURPv53h8ZlM",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-mirro_2760911007.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2MtbWlycm9fMjc2MDkxMTAwNy5wbmciLCJpYXQiOjE3NzY4ODU3MTksImV4cCI6MTgwODQyMTcxOX0.4LBZgMizNgHlnPhaq8VJRD7MmhRtxgBHzsIqxRHivXQ",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760137947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDEzNzk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3MjksImV4cCI6MTgwODQyMTcyOX0.YWtSsXKrBnMoAeM0SM1tdUZzGIb8zLo9s_xZ0XunSGs",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760912105.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDkxMjEwNS5wbmciLCJpYXQiOjE3NzY4ODU3NDQsImV4cCI6MTgwODQyMTc0NH0.T7-toEAB32FhzJKhMZGE9UPTg8uFeZMzFOeftGMFx68",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760129940.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEyOTk0MC5wbmciLCJpYXQiOjE3NzY4ODU3NzcsImV4cCI6MTgwODQyMTc3N30.Uz52h08uZp3iSEf8eTHAs_q69vkeqYh4SW0ovngdVS4",
+    "https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760130947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEzMDk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3OTEsImV4cCI6MTgwODQyMTc5MX0.dUGnDBruOuJlJXSHs22FboVmqtZ7Go1BhRxOJlx6guk"
+  ],
+};
+</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06060E;--bg2:#0A0A18;--card:#0F0F1D;
+  --b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);
+  --fi:#FF6B35;--fg:rgba(255,107,53,.28);
+  --vi:#C850C0;--vg:rgba(200,80,192,.2);
+  --go:#FFB800;--gr:#22C55E;
+  --tx:#F0EDF8;--mu:rgba(240,237,248,.5);
+  --dp:'Playfair Display',Georgia,serif;
+  --bd:'Outfit',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--tx);font-family:var(--bd);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+button,a{cursor:pointer;text-decoration:none;color:inherit}
+
+/* layout */
+.con{max-width:1180px;margin:0 auto;padding:0 1.25rem}
+.nar{max-width:720px;margin:0 auto;padding:0 1.25rem}
+.sec{padding:5rem 0;position:relative;overflow:hidden}
+.bg2{background:var(--bg2)}
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--fi),var(--vi),transparent)}
+.sh{text-align:center;margin-bottom:3.5rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.ga{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}.ga{grid-template-columns:1fr}}
+@media(min-width:701px) and (max-width:900px){.g3{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}}
+
+/* typography */
+.dxl{font-family:var(--dp);font-size:clamp(2.8rem,7vw,5.2rem);line-height:1.03;font-weight:900;letter-spacing:-.02em}
+.dlg{font-family:var(--dp);font-size:clamp(1.9rem,4.5vw,3.2rem);line-height:1.08;font-weight:700}
+.lbl{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--fi);display:block;margin-bottom:.5rem}
+.gt{background:linear-gradient(135deg,var(--fi),var(--vi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gt2{background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stars{color:var(--go);letter-spacing:2px}
+.live{width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block;animation:lp 1.6s ease-in-out infinite;flex-shrink:0}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.72)}}
+
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* aurora */
+.aur{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);will-change:transform}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(200,80,192,.42),transparent 68%);top:-260px;left:-160px;animation:da 14s ease-in-out infinite}
+.o2{width:560px;height:560px;background:radial-gradient(circle,rgba(255,107,53,.38),transparent 68%);top:60px;right:-180px;animation:db 18s ease-in-out infinite}
+.o3{width:460px;height:460px;background:radial-gradient(circle,rgba(123,47,247,.32),transparent 68%);bottom:-80px;left:38%;animation:dc 11s ease-in-out infinite}
+@keyframes da{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(40px,-50px) scale(1.06)}70%{transform:translate(-28px,22px) scale(.95)}}
+@keyframes db{0%,100%{transform:translate(0,0)}35%{transform:translate(-32px,38px) scale(1.04)}65%{transform:translate(18px,-18px) scale(.97)}}
+@keyframes dc{0%,100%{transform:translate(0,0)}50%{transform:translate(-22px,-32px) scale(1.08)}}
+
+/* ticker */
+.tw{overflow:hidden;background:linear-gradient(90deg,var(--fi),var(--vi));padding:9px 0}
+.tt{display:flex;width:max-content;animation:tk 32s linear infinite}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti{padding:0 2rem;white-space:nowrap;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.6rem}
+.td{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.6);flex-shrink:0}
+
+/* nav */
+#nav{position:sticky;top:0;z-index:200;background:rgba(6,6,14,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--b1)}
+.ni{max-width:1180px;margin:0 auto;padding:0 1.25rem;height:62px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:var(--dp);font-weight:900;font-size:1.3rem;background:linear-gradient(135deg,var(--fi),var(--vi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.obadge{font-size:.56rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(135deg,var(--go),var(--fi));color:#000;padding:3px 8px;border-radius:100px;margin-left:.4rem;vertical-align:middle}
+.nav-brand-wrap{display:flex;align-items:center;gap:.5rem;min-width:0;flex:1}
+.nav-actions{display:flex;align-items:center;gap:.9rem;flex-shrink:0}
+#nstock{display:flex;align-items:center;gap:.45rem;font-size:.72rem;color:var(--mu)}
+#stockNum{color:var(--tx);font-weight:800}
+.stock-flash{box-shadow:0 0 0 1px rgba(74,222,128,.22),0 0 24px rgba(74,222,128,.12);transition:box-shadow .3s ease}
+@media(max-width:640px){#nav{top:0}.ni{height:auto;padding:.75rem 1rem;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.65rem .75rem}.nav-brand-wrap{min-width:0}.brand{font-size:clamp(1rem,6vw,1.2rem);white-space:nowrap}.obadge{font-size:.47rem;padding:3px 6px;margin-left:0}.nav-actions{justify-self:end;gap:.55rem}.btn.bsm{padding:.78rem .95rem;font-size:.76rem}.btn.bsm .wai{width:18px;height:18px}#nstock{grid-column:1 / -1;justify-content:center;font-size:.76rem;background:rgba(255,255,255,.04);border:1px solid var(--b1);padding:.45rem .7rem;border-radius:999px}}
+@media(max-width:400px){.ni{grid-template-columns:1fr}.nav-actions{justify-self:stretch;justify-content:flex-end}#nstock{font-size:.72rem;padding:.42rem .55rem}}
+
+/* btn */
+.btn{position:relative;background:linear-gradient(135deg,var(--fi),var(--vi));border:none;border-radius:100px;padding:.9rem 2.2rem;font-family:var(--bd);font-size:.9rem;font-weight:700;letter-spacing:.05em;color:#fff;text-transform:uppercase;display:inline-flex;align-items:center;gap:.6rem;overflow:hidden;transition:transform .2s,box-shadow .2s;box-shadow:0 0 30px var(--fg),0 0 60px var(--vg);flex-shrink:0}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);transform:translateX(-120%) skewX(-15deg);animation:sh 3s ease-in-out infinite}
+@keyframes sh{0%{transform:translateX(-120%) skewX(-15deg)}55%,100%{transform:translateX(220%) skewX(-15deg)}}
+.btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 50px var(--fg),0 0 90px var(--vg)}
+.btn:active{transform:scale(.98)}
+.bsm{padding:.6rem 1.3rem;font-size:.8rem}
+.bfl{width:100%;justify-content:center;padding:1.15rem}
+.bol{background:transparent;border:1px solid var(--b2);box-shadow:none;color:var(--tx)}
+.bol:hover{background:rgba(255,255,255,.05);box-shadow:none}
+
+/* wa icon (reusable) */
+.wai{width:20px;height:20px;flex-shrink:0}
+
+/* cod pill */
+.cod{display:inline-flex;align-items:center;gap:.45rem;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);border-radius:100px;padding:.4rem .85rem;font-size:.77rem;font-weight:700;color:#4ade80}
+
+/* ═══ HERO ═══ */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:5rem 0 4rem}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;position:relative;z-index:2;width:100%}
+@media(max-width:860px){.hl{grid-template-columns:1fr;gap:2rem}.hic{order:-1}}
+
+/* ═══ CAROUSEL ═══ */
+.cwrap{position:relative}
+.cglow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:115%;height:115%;border-radius:50%;background:conic-gradient(from 0deg,var(--fi),var(--vi),var(--go),var(--fi));filter:blur(55px);opacity:.22;animation:gs 8s linear infinite;z-index:0;pointer-events:none}
+@keyframes gs{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.cin{position:relative;z-index:1;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#090612}
+.ctr{display:flex;width:100%;height:100%;will-change:transform;transition:transform .75s cubic-bezier(.22,.61,.36,1)}
+.csl{flex:0 0 100%;width:100%;min-width:100%;height:100%;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#090612}
+.cslbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(28px) saturate(1.05);transform:scale(1.12);opacity:.42}
+.cslov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,14,.08),rgba(6,6,14,.38))}
+.cslm{position:relative;z-index:1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:1rem}
+.csl img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center;margin:auto}
+.cph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.cdots{display:flex;justify-content:center;gap:.5rem;margin-top:.875rem}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--b2);cursor:pointer;transition:all .3s;border:none;padding:0}
+.dot.on{width:28px;border-radius:4px;background:var(--fi)}
+.carr{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;background:rgba(6,6,14,.72);border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,transform .2s;cursor:pointer;backdrop-filter:blur(8px)}
+.carr:hover{background:rgba(255,107,53,.3);border-color:rgba(255,107,53,.35);transform:translateY(-50%) scale(1.03)}
+.cl{left:-14px}.cr{right:-14px}
+@media(max-width:500px){.cl{left:8px}.cr{right:8px}}
+.cbadge{position:absolute;z-index:4}
+.cbtl{top:1rem;left:-1.2rem;background:rgba(6,6,14,.88);backdrop-filter:blur(12px);border:1px solid var(--b2);border-radius:12px;padding:.6rem .85rem}
+.cbtr{top:1rem;right:-1.2rem;background:linear-gradient(135deg,var(--fi),var(--vi));border-radius:12px;padding:.6rem .85rem;text-align:center}
+@media(max-width:500px){.cbtl{left:.5rem}.cbtr{right:.5rem}}
+@media(max-width:560px){.cwrap{padding-top:18px}.cbtl,.cbtr{top:0;transform:translateY(-38%)}.cbtl{left:.55rem;padding:.45rem .62rem}.cbtr{right:.55rem;padding:.42rem .6rem}.cbtl .stars{font-size:.72rem !important}.cbtl p{font-size:.6rem !important}.cbtr p:first-child{font-size:.5rem !important}.cbtr p:last-child{font-size:1.15rem !important}}
+
+/* buy box */
+.pwas{display:block;text-decoration:line-through;color:var(--mu);font-size:1rem;line-height:1.15;margin-bottom:.12rem}
+.pnow{display:block;position:relative;font-family:var(--dp);font-size:2.5rem;font-weight:900;line-height:1.14;white-space:nowrap;padding:.08em .08em .03em;overflow:visible;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.chk{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.65rem}
+.ci{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--fi),var(--vi));flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.oban{background:linear-gradient(135deg,rgba(255,184,0,.08),rgba(255,107,53,.07));border:1px solid rgba(255,184,0,.2);border-radius:14px;padding:.9rem 1.2rem;display:flex;align-items:flex-start;gap:.85rem;margin-bottom:1.5rem}
+.obi{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--go),var(--fi));display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+
+/* ═══ STATS — RINGS ═══ */
+#stats{padding:4.5rem 0;background:var(--bg2)}
+.sc{text-align:center;padding:1.75rem .75rem}
+.rw{position:relative;width:118px;height:118px;margin:0 auto 1.2rem}
+.rs{width:118px;height:118px;transform:rotate(-90deg)}
+.rt{fill:none;stroke:rgba(255,255,255,.07);stroke-width:6}
+.rf{fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:338;stroke-dashoffset:338;transition:stroke-dashoffset 2.2s cubic-bezier(.16,1,.3,1)}
+.rv2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--dp);font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;text-align:center;white-space:nowrap}
+
+/* ═══ BA CAROUSEL ═══ */
+#ba{padding:5rem 0;background:var(--bg2)}
+.baw{position:relative;overflow:hidden;margin-top:2.5rem;padding:0 .5rem}
+.bat{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:0}
+.bat::-webkit-scrollbar{display:none}
+.bas{flex:0 0 100%;min-width:0;padding:0 .5rem;box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always}
+@media(min-width:901px){.bas{flex-basis:33.333%}}
+@media(min-width:601px) and (max-width:900px){.bas{flex-basis:50%}}
+@media(max-width:600px){.bas{flex-basis:100%}}
+.bac{height:100%;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:var(--card);border:1px solid var(--b1);position:relative;transition:border-color .3s,transform .3s}
+.bac:hover{border-color:rgba(255,107,53,.35);transform:translateY(-2px)}
+.bai{aspect-ratio:1/1.14;overflow:hidden;position:relative;background:#090612;display:flex;align-items:center;justify-content:center}
+.ba-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(28px) saturate(1.05);transform:scale(1.12);opacity:.34}
+.ba-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,14,.04),rgba(6,6,14,.28))}
+.ba-media{position:relative;z-index:1;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:.65rem}
+.bai img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;transition:transform .6s}
+.bac:hover .ba-media img{transform:scale(1.02)}
+.bph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}
+.bin{padding:1.1rem 1.25rem 1.2rem}
+@media(max-width:600px){.bin{padding:1rem 1.05rem 1.15rem}.bin p:last-child{font-size:.82rem;line-height:1.55}}
+
+/* ═══ HOW IT WORKS ═══ */
+.sw{aspect-ratio:1;position:relative;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;background:transparent;overflow:visible}
+.sw::before{content:'';position:absolute;inset:8px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);box-shadow:0 14px 32px rgba(0,0,0,.24)}
+.sw img{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px);object-fit:cover;object-position:center;display:block;border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 16px 30px rgba(0,0,0,.28)}
+.swo{position:absolute;inset:18px;border-radius:50%;background:linear-gradient(180deg,rgba(6,6,14,0) 0%,rgba(6,6,14,.08) 58%,rgba(6,6,14,.2) 100%);pointer-events:none}
+.snum{width:66px;height:66px;border-radius:50%;background:linear-gradient(135deg,var(--fi),var(--vi));display:flex;align-items:center;justify-content:center;font-family:var(--dp);font-size:1.65rem;font-weight:900;margin:0 auto .75rem}
+
+/* ═══ INGREDIENTS ═══ */
+.ic{padding:1.75rem;border-radius:20px;background:var(--card);border:1px solid var(--b1);transition:border-color .3s,transform .3s}
+.ic:hover{border-color:rgba(255,107,53,.4);transform:translateY(-5px)}
+.iico{width:60px;height:60px;border-radius:16px;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.iico img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* ═══ PLANES ═══ */
+#planes{padding:6rem 0;background:var(--bg)}
+.planes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+@media(max-width:820px){.planes-grid{grid-template-columns:1fr;gap:1px;background:var(--b1)}}
+
+/* card base */
+.pc{position:relative;background:var(--bg2);display:flex;flex-direction:column;overflow:hidden;transition:transform .3s}
+/* left card */
+.pc-l{border-radius:24px 0 0 24px;border:1px solid var(--b1)}
+/* center card (featured) */
+.pc-c{border-radius:0;border:1px solid var(--fi);border-left:none;border-right:none;z-index:2;transform:scaleY(1.03);background:#0c0c1a}
+/* right card */
+.pc-r{border-radius:0 24px 24px 0;border:1px solid var(--b1);border-left:none}
+@media(max-width:820px){.pc-l,.pc-c,.pc-r{border-radius:0;border:none;transform:none;background:var(--bg2)}}
+@media(min-width:821px){.pc-l:hover{transform:scale(1.01)}.pc-r:hover{transform:scale(1.01)}}
+
+/* bottle stage — visual top area */
+.pstage{position:relative;display:flex;align-items:center;justify-content:center;padding:2.2rem 1.2rem .4rem;min-height:220px;overflow:hidden}
+.pstage-glow{position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);width:220px;height:126px;border-radius:50%;filter:blur(44px);opacity:.5}
+.pc-c .pstage-glow{background:radial-gradient(circle,var(--fi),var(--vi))}
+.pc-l .pstage-glow{background:radial-gradient(circle,rgba(255,107,53,.4),transparent)}
+.pc-r .pstage-glow{background:radial-gradient(circle,rgba(255,184,0,.4),transparent)}
+/* bottle image group */
+.bottles{display:flex;align-items:center;justify-content:center;position:relative;z-index:1;width:100%}
+.plan-shot{position:relative;width:min(100%,230px);margin:0 auto;border-radius:22px;overflow:hidden;isolation:isolate;box-shadow:0 14px 34px rgba(0,0,0,.34);background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);transition:transform .3s ease, box-shadow .3s ease}
+.plan-shot::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 28%,transparent 72%,rgba(0,0,0,.12))}
+.plan-shot img{display:block;width:100%;height:auto;object-fit:contain;border-radius:inherit;-webkit-mask-image:radial-gradient(ellipse at center, #000 72%, rgba(0,0,0,.95) 84%, transparent 100%);mask-image:radial-gradient(ellipse at center, #000 72%, rgba(0,0,0,.95) 84%, transparent 100%);filter:drop-shadow(0 10px 26px rgba(0,0,0,.42))}
+.pc:hover .plan-shot{transform:translateY(-4px);box-shadow:0 18px 42px rgba(0,0,0,.42)}
+/* bottle placeholder SVG */
+.bottle-ph{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:160px;width:72px;position:relative}
+.bottle-ph-inner{width:52px;height:130px;border-radius:8px 8px 10px 10px;position:relative;overflow:hidden}
+.bottle-ph-cap{width:34px;height:18px;border-radius:4px 4px 0 0;margin-bottom:-2px;position:relative}
+.bottle-ph-label{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:36px;height:44px;border-radius:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+
+/* body area */
+.pbody{padding:1.5rem 1.5rem 2rem;display:flex;flex-direction:column;flex:1}
+.ptag2{display:inline-block;background:linear-gradient(135deg,var(--fi),var(--vi));border-radius:100px;padding:4px 16px;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem;white-space:nowrap;align-self:center}
+.ptag2-empty{height:22px;margin-bottom:.9rem}
+.pmeses{font-family:var(--dp);font-size:3.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+.pmeses-lbl{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);text-align:center;margin-bottom:1rem}
+.pppu{font-size:.78rem;color:var(--mu);text-align:center;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--b1)}
+.pprice{display:block;position:relative;font-family:var(--dp);font-size:2.3rem;font-weight:900;line-height:1.14;white-space:nowrap;padding:.08em .08em .03em;overflow:visible;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+.pwas2{display:block;text-decoration:line-through;color:var(--mu);font-size:.88rem;line-height:1.15;text-align:center;margin-bottom:.12rem}
+.psave{display:inline-block;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#4ade80;border-radius:100px;padding:4px 14px;font-size:.72rem;font-weight:700;margin:.4rem auto 1.25rem;display:block;text-align:center}
+.pfeats{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;flex:1}
+.pfeats li{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--mu)}
+.pfeats li span{color:var(--tx)}
+.pfi2{width:17px;height:17px;border-radius:50%;background:linear-gradient(135deg,var(--fi),var(--vi));flex-shrink:0;display:flex;align-items:center;justify-content:center}
+@media(max-width:600px){.pbody{padding:1.35rem 1.15rem 1.7rem}.pmeses{font-size:3.15rem}.pprice{font-size:2.08rem;line-height:1.16;padding:.1em .06em .04em}.pwas2{font-size:.84rem}.psave{font-size:.68rem;padding:4px 12px}.pnow{font-size:2.28rem;line-height:1.16;padding:.1em .05em .04em}.pwas{font-size:.92rem}}
+/* center card accent line top */
+.pc-c::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--vi),var(--fi),var(--go));z-index:3}
+.codbanner{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:14px;padding:1.25rem;display:flex;align-items:flex-start;gap:1rem;margin-bottom:3rem;flex-wrap:wrap}
+
+/* ═══ REVIEWS ═══ */
+.rvc{padding:1.5rem;border-radius:20px;background:var(--card);border:1px solid var(--b1)}
+.rva{width:56px;height:56px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--card);border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 20px rgba(0,0,0,.22)}
+.rva img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+.sp-wrap{margin:2.2rem 0 2.5rem;padding:1.15rem;border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--b1)}
+.sp-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.sp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.75rem}
+.sp-card{aspect-ratio:4/5;border-radius:18px;overflow:hidden;position:relative;background:var(--card);border:1px solid rgba(255,255,255,.06);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.sp-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .45s ease}
+.sp-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 38%,transparent 68%,rgba(6,6,14,.18));pointer-events:none}
+.sp-card:hover img{transform:scale(1.04)}
+@media(max-width:980px){.sp-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.sp-grid{grid-template-columns:repeat(2,1fr)}.rva{width:52px;height:52px}}
+@media(max-width:560px){#sb{padding:.75rem .85rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem;align-items:center}#sb > div:first-child{min-width:0}#sb .btn.bsm{width:auto;padding:.8rem .95rem;font-size:.76rem;white-space:nowrap}#sb .cod{font-size:.6rem;padding:.24rem .52rem}}
+
+/* ═══ GUARANTEE ═══ */
+.seals{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem;margin-top:3rem}
+.seal{display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:1.4rem 1.1rem;border-radius:20px;background:var(--card);border:1px solid var(--b1);min-width:128px;flex:1;max-width:172px;text-align:center;transition:border-color .3s,transform .3s}
+.seal:hover{border-color:rgba(255,107,53,.35);transform:translateY(-3px)}
+.sico{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.gring{width:148px;height:148px;border-radius:50%;background:conic-gradient(var(--go),var(--fi),var(--vi),var(--go));padding:3.5px;animation:grsp 9s linear infinite}
+@keyframes grsp{to{transform:rotate(360deg)}}
+.gri{width:100%;height:100%;border-radius:50%;background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+
+/* ═══ FAQ ═══ */
+.fi{border-bottom:1px solid var(--b1)}
+.fb{width:100%;text-align:left;padding:1.25rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:none;border:none;color:var(--tx);font-family:var(--bd);font-size:.95rem;font-weight:500;gap:1rem}
+.fic{width:26px;height:26px;border:1px solid var(--b2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;line-height:1;transition:transform .35s,background .3s,border-color .3s}
+.fi.op .fic{transform:rotate(45deg);background:var(--fi);border-color:var(--fi)}
+.fd{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.fd.op{max-height:400px;padding-bottom:1.25rem}
+.fd p{color:var(--mu);line-height:1.75;font-size:.9rem}
+
+/* ═══ FINAL CTA ═══ */
+#cta{padding:8rem 0;background:var(--bg2);position:relative;overflow:hidden}
+.scpill{display:inline-flex;align-items:center;gap:.65rem;padding:.7rem 1.2rem;border-radius:100px;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.25);font-size:.85rem;font-weight:600;margin-bottom:2rem}
+
+/* ═══ STICKY BAR ═══ */
+#sb{position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(6,6,14,.97);border-top:1px solid var(--b1);backdrop-filter:blur(24px);transform:translateY(110%);transition:transform .4s cubic-bezier(.16,1,.3,1);padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+
+/* progress bars (reviews) */
+.pbar{background:rgba(255,255,255,.1);border-radius:3px;height:6px;overflow:hidden;flex:1}
+.pfill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--go),var(--fi));width:0;transition:width 1.6s ease}
+
+footer{padding:2rem 0;border-top:1px solid var(--b1)}
+.fin{max-width:1180px;margin:0 auto;padding:0 1.25rem;display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="tw">
+<div class="tt">
+<span class="ti"><span class="td"></span>PAGA EN CASA al recibir</span>
+<span class="ti"><span class="td"></span>Envío GRATIS a todo Colombia</span>
+<span class="ti"><span class="td"></span>EL ORIGINAL ® — No aceptes copias</span>
+<span class="ti"><span class="td"></span>Resultados desde la semana 2</span>
+<span class="ti"><span class="td"></span>+1.200 mujeres transformadas</span>
+<span class="ti"><span class="td"></span>Garantía 30 días</span>
+<span class="ti"><span class="td"></span>PAGA EN CASA al recibir</span>
+<span class="ti"><span class="td"></span>Envío GRATIS a todo Colombia</span>
+<span class="ti"><span class="td"></span>EL ORIGINAL ® — No aceptes copias</span>
+<span class="ti"><span class="td"></span>Resultados desde la semana 2</span>
+<span class="ti"><span class="td"></span>+1.200 mujeres transformadas</span>
+<span class="ti"><span class="td"></span>Garantía 30 días</span>
+</div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+<div class="ni">
+  <div class="nav-brand-wrap">
+    <span class="brand">SLIM BURN PRO</span>
+    <span class="obadge">EL ORIGINAL ®</span>
+  </div>
+  <div class="nav-actions">
+    <div id="nstock">
+      <span class="live"></span><span>Solo <strong id="stockNum">12</strong> unidades</span>
+    </div>
+    <button class="btn bsm" onclick="wa('nav')">
+      <svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir
+    </button>
+  </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+<div class="aur"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="con" style="position:relative;z-index:2;width:100%">
+<div class="hl">
+
+  <!-- GALLERY -->
+  <div class="hic rv" style="position:relative">
+    <div class="cwrap">
+      <div class="cglow"></div>
+      <div class="cin"><div class="ctr" id="htr"></div></div>
+      <button class="carr cl" onclick="HC.prev()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="carr cr" onclick="HC.next()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <div class="cbadge cbtl"><div class="stars" style="font-size:.82rem">★★★★★</div><p style="font-size:.68rem;font-weight:700;margin-top:2px">4.9 · 1.247 reseñas</p></div>
+      <div class="cbadge cbtr"><p style="font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.9">Ahorra</p><p style="font-family:var(--dp);font-size:1.5rem;font-weight:900;line-height:1">32%</p></div>
+    </div>
+    <div class="cdots" id="hdots"></div>
+  </div>
+
+  <!-- BUY BOX -->
+  <div class="rv" style="animation-delay:.18s">
+    <div class="oban">
+      <div class="obi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><p style="font-weight:700;font-size:.82rem;color:var(--go)">EL ORIGINAL ® — Cuidado con las copias</p><p style="font-size:.73rem;color:var(--mu);margin-top:2px">Solo se vende por este canal oficial. Existen imitaciones en el mercado.</p></div>
+    </div>
+    <span class="lbl">Para mujeres que quieren bajar barriga y verse más livianas</span>
+    <h1 class="dxl" style="margin-bottom:1rem">SLIM<br><em class="gt">BURN PRO</em></h1>
+    <p style="font-size:1rem;color:var(--mu);line-height:1.75;margin-bottom:1.4rem">Si lo que buscas es desinflamarte, sentir la ropa más suelta y empezar a bajar grasa abdominal, esto es para ti. Su fórmula ayuda a activar la quema de grasa y acompaña el cambio sin dietas extremas ni rebote.</p>
+    <div style="display:flex;gap:.65rem;flex-wrap:wrap;margin-bottom:1.4rem">
+      <span class="cod"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Paga en casa al recibir</span>
+      <span class="cod"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Envío GRATIS Colombia</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:.65rem;margin-bottom:1.2rem"><span class="stars" style="font-size:1.2rem">★★★★★</span><span style="font-weight:700">4.9</span><span style="color:var(--mu);font-size:.85rem">(1.247 reseñas)</span></div>
+    <div style="margin-bottom:1.4rem">
+      <span class="pwas">$149.900</span>
+      <div class="pnow">$99.900</div>
+      <p style="font-size:.74rem;color:var(--mu);margin-top:4px">1 frasco · 1 mes de tratamiento</p>
+    </div>
+    <div style="margin-bottom:1.75rem">
+      <div class="chk"><div class="ci"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></div><p style="font-size:.9rem;line-height:1.5">Activa el AMPK · quema grasa visceral sin dietas extremas</p></div>
+      <div class="chk"><div class="ci"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></div><p style="font-size:.9rem;line-height:1.5">Resultados visibles desde la semana 2 · sin rebote</p></div>
+      <div class="chk"><div class="ci"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></div><p style="font-size:.9rem;line-height:1.5">100% natural · sin efectos secundarios · sin GMO</p></div>
+    </div>
+    <button class="btn bfl" onclick="wa('hero')" style="margin-bottom:.8rem;font-size:1rem">
+      <svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Quiero mi SLIM BURN PRO
+    </button>
+    <p style="text-align:center;font-size:.74rem;color:var(--mu)"><span class="live" style="margin-right:5px"></span><span id="viewers">23 personas</span> viendo esto ahora</p>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- STATS — ANIMATED RINGS -->
+<div class="div"></div>
+<section id="stats">
+<svg width="0" height="0" style="position:absolute;pointer-events:none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FF6B35"/><stop offset="100%" stop-color="#FFB800"/></linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C850C0"/><stop offset="100%" stop-color="#FF6B35"/></linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB800"/><stop offset="100%" stop-color="#FF6B35"/></linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#22C55E"/><stop offset="100%" stop-color="#FFB800"/></linearGradient>
+  </defs>
+</svg>
+<div class="con"><div class="g4">
+  <div class="sc rv"><div class="rw"><svg class="rs" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="rt"/><circle cx="60" cy="60" r="54" class="rf" style="stroke:url(#g1)" data-p="92" id="r0"/></svg><div class="rv2"><span data-n="1247" data-f="num">0</span></div></div><p style="font-weight:700;font-size:.9rem">Mujeres</p><p style="color:var(--mu);font-size:.78rem;margin-top:.2rem">transformadas en Colombia</p></div>
+  <div class="sc rv" style="animation-delay:.1s"><div class="rw"><svg class="rs" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="rt"/><circle cx="60" cy="60" r="54" class="rf" style="stroke:url(#g2)" data-p="98" id="r1"/></svg><div class="rv2"><span data-n="49" data-f="rat">0</span></div></div><p style="font-weight:700;font-size:.9rem">Rating promedio</p><p style="color:var(--mu);font-size:.78rem;margin-top:.2rem">de 5.0 en reseñas verificadas</p></div>
+  <div class="sc rv" style="animation-delay:.2s"><div class="rw"><svg class="rs" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="rt"/><circle cx="60" cy="60" r="54" class="rf" style="stroke:url(#g3)" data-p="80" id="r2"/></svg><div class="rv2"><span data-n="2" data-f="wk">0</span></div></div><p style="font-weight:700;font-size:.9rem">Semanas</p><p style="color:var(--mu);font-size:.78rem;margin-top:.2rem">para resultados visibles</p></div>
+  <div class="sc rv" style="animation-delay:.3s"><div class="rw"><svg class="rs" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="rt"/><circle cx="60" cy="60" r="54" class="rf" style="stroke:url(#g4)" data-p="100" id="r3"/></svg><div class="rv2"><span data-n="100" data-f="pct">0</span></div></div><p style="font-weight:700;font-size:.9rem">Natural</p><p style="color:var(--mu);font-size:.78rem;margin-top:.2rem">sin efectos secundarios</p></div>
+</div></div>
+</section>
+<div class="div"></div>
+
+<!-- ANTES/DESPUÉS — CAROUSEL 6 -->
+<section id="ba">
+<div class="con"><div class="sh rv"><span class="lbl">Resultados reales · Mujeres reales</span><h2 class="dlg">Ellas ya <em class="gt">lo lograron</em></h2><p style="color:var(--mu);margin-top:.75rem;font-size:.93rem">Sin filtros. Sin edición. Mujeres colombianas que lo hicieron realidad.</p></div></div>
+<div class="baw" id="baw">
+  <div class="bat" id="btr"></div>
+  <button class="carr" style="top:35%;left:1rem;z-index:10" onclick="BC.prev()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <button class="carr" style="top:35%;right:1rem;z-index:10" onclick="BC.next()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+</div>
+<div class="cdots" id="bdots"></div>
+<div style="text-align:center;margin-top:2.5rem">
+  <button class="btn" onclick="wa('ba')"><svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Quiero mi transformación</button>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- CÓMO FUNCIONA — IMAGE FORWARD -->
+<section class="sec">
+<div class="aur" style="opacity:.2"><div class="orb o1" style="opacity:.15"></div></div>
+<div class="con" style="position:relative;z-index:1">
+  <div class="sh rv"><span class="lbl">El proceso</span><h2 class="dlg">Así funciona<br><em class="gt">por dentro</em></h2></div>
+  <div class="g3">
+    <div class="rv" style="text-align:center">
+      <div class="sw">
+        <img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9lemdpZi5jb20tdmlkZW8tdG8td2VicC1jb252ZXJ0ZXIud2VicCIsImlhdCI6MTc3Njg3OTM2MSwiZXhwIjoxODA4NDE1MzYxfQ.IYI0vTj67HplrP7WvZqLqq3ekX9MJluBKnpN9Sz7oBA" alt="Paso 1 - Activa el AMPK" loading="lazy">
+        <div class="swo"></div>
+      </div>
+      <div class="snum">1</div>
+      <h3 style="font-family:var(--dp);font-size:1.2rem;font-weight:700;margin-bottom:.55rem">Activa el AMPK</h3>
+      <p style="color:var(--mu);font-size:.88rem;line-height:1.7">Actiponin® enciende la enzima maestra de tu metabolismo. Tu cuerpo deja de almacenar grasa y empieza a quemarla.</p>
+    </div>
+    <div class="rv" style="text-align:center;animation-delay:.15s">
+      <div class="sw">
+        <img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_a-single-pristine-dark-gr_2843586778-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2Etc2luZ2xlLXByaXN0aW5lLWRhcmstZ3JfMjg0MzU4Njc3OC1lemdpZi5jb20tdmlkZW8tdG8td2VicC1jb252ZXJ0ZXIud2VicCIsImlhdCI6MTc3Njg3OTQxMywiZXhwIjoxODA4NDE1NDEzfQ.OW71kOF3071duw4myUGALLFpL5W69A1KTS4PoaL_aaA" alt="Paso 2 - Quema desde adentro" loading="lazy">
+        <div class="swo"></div>
+      </div>
+      <div class="snum">2</div>
+      <h3 style="font-family:var(--dp);font-size:1.2rem;font-weight:700;margin-bottom:.55rem">Quema desde adentro</h3>
+      <p style="color:var(--mu);font-size:.88rem;line-height:1.7">Té Verde potencia la termogénesis natural: más calor, más calorías quemadas incluso en reposo.</p>
+    </div>
+    <div class="rv" style="text-align:center;animation-delay:.3s">
+      <div class="sw">
+        <img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_two-elegant-glowing-geome_2843590895-ezgif.com-video-to-webp-converter.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3R3by1lbGVnYW50LWdsb3dpbmctZ2VvbWVfMjg0MzU5MDg5NS1lemdpZi5jb20tdmlkZW8tdG8td2VicC1jb252ZXJ0ZXIud2VicCIsImlhdCI6MTc3Njg3OTQyNywiZXhwIjoxODA4NDE1NDI3fQ.l7xQ5TS_nNAsHllFxJiUxpPN8r82yKGnxV5gEgFAAL0" alt="Paso 3 - Mantén para siempre" loading="lazy">
+        <div class="swo"></div>
+      </div>
+      <div class="snum">3</div>
+      <h3 style="font-family:var(--dp);font-size:1.2rem;font-weight:700;margin-bottom:.55rem">Mantén para siempre</h3>
+      <p style="color:var(--mu);font-size:.88rem;line-height:1.7">B6 y B12 regulan el metabolismo de forma sostenida. Sin rebote. Tu cuerpo aprende a funcionar diferente.</p>
+    </div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- INGREDIENTES -->
+<section class="sec bg2">
+<div class="con">
+  <div class="sh rv"><span class="lbl">Fórmula científica</span><h2 class="dlg">Ingredientes que<br><em class="gt">tienen evidencia</em></h2></div>
+  <div class="g4" id="igrid"></div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- PLANES / TRATAMIENTO -->
+<section id="planes">
+<div class="aur" style="opacity:.25"><div class="orb o1" style="opacity:.18"></div><div class="orb o2" style="opacity:.15"></div></div>
+<div class="con" style="position:relative;z-index:1">
+  <div class="sh rv">
+    <span class="lbl">Elige tu tratamiento</span>
+    <h2 class="dlg">Más tiempo =<br><em class="gt">mejores resultados</em></h2>
+    <p style="color:var(--mu);margin-top:.75rem;font-size:.93rem">El AMPK necesita tiempo para reentrenar tu metabolismo. Cuanto más constante, mayor la transformación.</p>
+  </div>
+  <div class="codbanner rv">
+    <div style="width:46px;height:46px;border-radius:50%;background:rgba(34,197,94,.15);border:2px solid rgba(34,197,94,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div><p style="font-weight:700;font-size:.92rem;color:#4ade80">Paga en casa al recibir tu pedido</p><p style="font-size:.8rem;color:var(--mu);margin-top:2px">No necesitas tarjeta ni pago anticipado. Recibe primero, paga cuando llega. Envío gratis a toda Colombia.</p></div>
+  </div>
+  <div class="planes-grid rv" id="pgrid"></div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- RESEÑAS -->
+<section class="sec">
+<div class="aur" style="opacity:.15"><div class="orb o2" style="opacity:.1"></div></div>
+<div class="con" style="position:relative;z-index:1">
+  <div class="sh rv">
+    <span class="lbl">Lo que dicen ellas</span>
+    <h2 class="dlg">Reseñas <em class="gt">verificadas</em></h2>
+    <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:.75rem"><span class="stars" style="font-size:1.8rem">★★★★★</span><div><p style="font-family:var(--dp);font-size:1.8rem;font-weight:900;line-height:1">4.9</p><p style="color:var(--mu);font-size:.75rem">1.247 reseñas</p></div></div>
+      <div style="display:flex;flex-direction:column;gap:.35rem">
+        <div style="display:flex;align-items:center;gap:.6rem;font-size:.74rem"><span style="color:var(--mu);width:28px">5 ★</span><div class="pbar"><div class="pfill" data-w="91"></div></div><span style="color:var(--mu)">91%</span></div>
+        <div style="display:flex;align-items:center;gap:.6rem;font-size:.74rem"><span style="color:var(--mu);width:28px">4 ★</span><div class="pbar"><div class="pfill" data-w="6"></div></div><span style="color:var(--mu)">6%</span></div>
+        <div style="display:flex;align-items:center;gap:.6rem;font-size:.74rem"><span style="color:var(--mu);width:28px">3 ★</span><div class="pbar"><div class="pfill" data-w="3"></div></div><span style="color:var(--mu)">3%</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sp-wrap rv">
+    <div class="sp-head">
+      <div>
+        <p style="font-weight:700;font-size:.92rem">Ellas también ya pidieron el suyo</p>
+        <p style="color:var(--mu);font-size:.78rem;margin-top:.15rem">Fotos de clientas y compradoras que confiaron en el tratamiento.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:var(--mu)"><span class="live"></span><span>Compras verificadas</span></div>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_hyper-realistic-smartphon_2760910000.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2h5cGVyLXJlYWxpc3RpYy1zbWFydHBob25fMjc2MDkxMDAwMC5wbmciLCJpYXQiOjE3NzY4ODU2OTUsImV4cCI6MTgwODQyMTY5NX0.da6PgdYwSrhBrjm5bzBUvizt3v5RCJOpURPv53h8ZlM" alt="Cliente 1" loading="lazy"></div>
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-mirro_2760911007.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2MtbWlycm9fMjc2MDkxMTAwNy5wbmciLCJpYXQiOjE3NzY4ODU3MTksImV4cCI6MTgwODQyMTcxOX0.4LBZgMizNgHlnPhaq8VJRD7MmhRtxgBHzsIqxRHivXQ" alt="Cliente 2" loading="lazy"></div>
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760137947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDEzNzk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3MjksImV4cCI6MTgwODQyMTcyOX0.YWtSsXKrBnMoAeM0SM1tdUZzGIb8zLo9s_xZ0XunSGs" alt="Cliente 3" loading="lazy"></div>
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760912105.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDkxMjEwNS5wbmciLCJpYXQiOjE3NzY4ODU3NDQsImV4cCI6MTgwODQyMTc0NH0.T7-toEAB32FhzJKhMZGE9UPTg8uFeZMzFOeftGMFx68" alt="Cliente 4" loading="lazy"></div>
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760129940.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEyOTk0MC5wbmciLCJpYXQiOjE3NzY4ODU3NzcsImV4cCI6MTgwODQyMTc3N30.Uz52h08uZp3iSEf8eTHAs_q69vkeqYh4SW0ovngdVS4" alt="Cliente 5" loading="lazy"></div>
+      <div class="sp-card"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760130947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEzMDk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3OTEsImV4cCI6MTgwODQyMTc5MX0.dUGnDBruOuJlJXSHs22FboVmqtZ7Go1BhRxOJlx6guk" alt="Cliente 6" loading="lazy"></div>
+    </div>
+  </div>
+  <div class="ga rv">
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_hyper-realistic-smartphon_2760910000.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX2h5cGVyLXJlYWxpc3RpYy1zbWFydHBob25fMjc2MDkxMDAwMC5wbmciLCJpYXQiOjE3NzY4ODU2OTUsImV4cCI6MTgwODQyMTY5NX0.da6PgdYwSrhBrjm5bzBUvizt3v5RCJOpURPv53h8ZlM" alt="Sandra Ospina"></div><div><p style="font-weight:700;font-size:.88rem">Sandra Ospina</p><p style="color:var(--mu);font-size:.72rem">Bucaramanga · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"11 kg con 3 frascos. Mi esposo no me reconoció al llegar al aeropuerto. Sin cambios drásticos."</p></div>
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-mirro_2760911007.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2MtbWlycm9fMjc2MDkxMTAwNy5wbmciLCJpYXQiOjE3NzY4ODU3MTksImV4cCI6MTgwODQyMTcxOX0.4LBZgMizNgHlnPhaq8VJRD7MmhRtxgBHzsIqxRHivXQ" alt="Diana Restrepo"></div><div><p style="font-weight:700;font-size:.88rem">Diana Restrepo</p><p style="color:var(--mu);font-size:.72rem">Medellín · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"Mi médico dijo que tenía el metabolismo lento. En 4 semanas con esto los resultados fueron increíbles."</p></div>
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760137947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDEzNzk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3MjksImV4cCI6MTgwODQyMTcyOX0.YWtSsXKrBnMoAeM0SM1tdUZzGIb8zLo9s_xZ0XunSGs" alt="Marcela Torres"></div><div><p style="font-weight:700;font-size:.88rem">Marcela Torres</p><p style="color:var(--mu);font-size:.72rem">Barranquilla · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"El primer frasco encendió algo. El segundo cambió las tallas. Ya lo pedí para mi mamá y hermana."</p></div>
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugc-selfi_2760912105.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2Mtc2VsZmlfMjc2MDkxMjEwNS5wbmciLCJpYXQiOjE3NzY4ODU3NDQsImV4cCI6MTgwODQyMTc0NH0.T7-toEAB32FhzJKhMZGE9UPTg8uFeZMzFOeftGMFx68" alt="Valentina Gómez"></div><div><p style="font-weight:700;font-size:.88rem">Valentina Gómez</p><p style="color:var(--mu);font-size:.72rem">Bogotá · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"Era escéptica total. Pero tiene respaldo científico real. Desde el primer mes mi barriga casi no está."</p></div>
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760129940.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEyOTk0MC5wbmciLCJpYXQiOjE3NzY4ODU3NzcsImV4cCI6MTgwODQyMTc3N30.Uz52h08uZp3iSEf8eTHAs_q69vkeqYh4SW0ovngdVS4" alt="Luisa Fernanda C."></div><div><p style="font-weight:700;font-size:.88rem">Luisa Fernanda C.</p><p style="color:var(--mu);font-size:.72rem">Pereira · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"Post embarazo: en 2 meses logré lo que no pude en 2 años. Voy por el 4to frasco."</p></div>
+    <div class="rvc"><div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem"><div class="rva"><img src="https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/freepik_ultra-realistic-ugcstyle-_2760130947.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9mcmVlcGlrX3VsdHJhLXJlYWxpc3RpYy11Z2NzdHlsZS1fMjc2MDEzMDk0Ny5wbmciLCJpYXQiOjE3NzY4ODU3OTEsImV4cCI6MTgwODQyMTc5MX0.dUGnDBruOuJlJXSHs22FboVmqtZ7Go1BhRxOJlx6guk" alt="Andrea Moreno"></div><div><p style="font-weight:700;font-size:.88rem">Andrea Moreno</p><p style="color:var(--mu);font-size:.72rem">Cali · Compra verificada</p></div></div><div class="stars" style="font-size:.8rem;margin-bottom:.6rem">★★★★★</div><p style="color:var(--mu);font-size:.85rem;line-height:1.7">"Pedí por WhatsApp, llegó rápido, pagué en casa. Resultado: -9 kg en 7 semanas. Sin palabras."</p></div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- GARANTÍA + SELLOS -->
+<section class="sec bg2">
+<div class="con" style="text-align:center">
+  <div class="sh rv">
+    <span class="lbl">Tu seguridad primero</span>
+    <div style="display:flex;justify-content:center;margin-bottom:2rem">
+      <div class="gring"><div class="gri"><p style="font-family:var(--dp);font-size:1.8rem;font-weight:900;line-height:1">30</p><p style="font-size:.52rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mu)">días de</p><p style="font-size:.52rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mu)">garantía</p></div></div>
+    </div>
+    <h2 class="dlg" style="margin-bottom:1.25rem">Si no funciona,<br><em class="gt">te devolvemos tu dinero</em></h2>
+    <p style="color:var(--mu);line-height:1.8;font-size:.95rem;max-width:500px;margin:0 auto">Si en 30 días no ves resultados, te reembolsamos el 100% sin preguntas. Así de seguros estamos de nuestra fórmula.</p>
+  </div>
+  <div class="seals rv">
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(255,184,0,.15),rgba(255,107,53,.1));border:2px solid rgba(255,184,0,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p style="font-weight:700;font-size:.82rem">EL ORIGINAL ®</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">Fórmula auténtica registrada. No aceptes copias.</p></div>
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(34,197,94,.15),rgba(16,163,74,.1));border:2px solid rgba(34,197,94,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><p style="font-weight:700;font-size:.82rem">Paga en Casa</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">Recibe primero, paga al entregar. Sin riesgo.</p></div>
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(200,80,192,.15),rgba(123,47,247,.1));border:2px solid rgba(200,80,192,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C850C0" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><p style="font-weight:700;font-size:.82rem">Envío Gratis</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">A toda Colombia en 2 a 4 días hábiles.</p></div>
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(255,107,53,.15),rgba(255,184,0,.1));border:2px solid rgba(255,107,53,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><p style="font-weight:700;font-size:.82rem">Garantía 30 días</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">Resultados o 100% de reembolso.</p></div>
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(255,184,0,.15),rgba(34,197,94,.1));border:2px solid rgba(255,184,0,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><p style="font-weight:700;font-size:.82rem">100% Natural</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">Sin GMO · Sin efectos secundarios.</p></div>
+    <div class="seal"><div class="sico" style="background:linear-gradient(135deg,rgba(123,47,247,.15),rgba(200,80,192,.1));border:2px solid rgba(123,47,247,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><p style="font-weight:700;font-size:.82rem">Resultados rápidos</p><p style="font-size:.7rem;color:var(--mu);line-height:1.4;margin-top:.2rem">Visibles desde la semana 2.</p></div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- FAQ -->
+<section class="sec">
+<div class="nar"><div class="sh rv"><span class="lbl">Preguntas frecuentes</span><h2 class="dlg">Todo lo que<br><em class="gt">necesitas saber</em></h2></div>
+<div class="rv">
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿En cuánto tiempo veo resultados?</span><span class="fic">+</span></button><div class="fd"><p>La mayoría reporta cambios visibles desde la semana 2. Los resultados más significativos aparecen entre la semana 4 y 8. Cada cuerpo es diferente.</p></div></div>
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿Tiene efectos secundarios?</span><span class="fic">+</span></button><div class="fd"><p>No. Fórmula 100% natural sin efectos secundarios conocidos. Si tienes condiciones médicas o estás embarazada, consulta primero con tu médico.</p></div></div>
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿Cómo hago el pedido y cómo pago?</span><span class="fic">+</span></button><div class="fd"><p>Haz clic en cualquier botón de WhatsApp. Confirmas el plan y dirección. Lo enviamos. Pagas cuando llega a tu puerta. Sin tarjeta, sin anticipos.</p></div></div>
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿Por qué hay copias en el mercado?</span><span class="fic">+</span></button><div class="fd"><p>Como cualquier producto exitoso, existen imitaciones con ingredientes inferiores o incorrectos. El SLIM BURN PRO ORIGINAL solo se vende por este canal oficial. Desconfía de otras fuentes.</p></div></div>
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿Hacen envío a todo Colombia?</span><span class="fic">+</span></button><div class="fd"><p>Sí, enviamos a todo el país. Tiempo de entrega: 2 a 4 días hábiles. Envío completamente gratis y pagas cuando recibes.</p></div></div>
+<div class="fi"><button class="fb" onclick="fq(this)"><span>¿Qué plan me recomiendas?</span><span class="fic">+</span></button><div class="fd"><p>El de 2 meses es el más elegido. El de 3 meses tiene el mejor precio por frasco y los mejores resultados totales con el mayor ahorro.</p></div></div>
+</div></div>
+</section>
+<div class="div"></div>
+
+<!-- CTA FINAL -->
+<section id="cta">
+<div class="aur"><div class="orb o1" style="opacity:.55"></div><div class="orb o2" style="opacity:.5"></div></div>
+<div class="nar" style="position:relative;z-index:1;text-align:center"><div class="rv">
+<span class="lbl">Es tu momento</span>
+<h2 class="dxl" style="margin-bottom:1.5rem">Únete a más de<br><em class="gt">1.247 mujeres</em> que ya cambiaron</h2>
+<p style="color:var(--mu);font-size:1rem;line-height:1.8;margin-bottom:2rem">El cuerpo que quieres no llega esperando. La decisión correcta en el momento correcto vale más que años de intentos.</p>
+<div class="scpill"><span class="live"></span>Solo quedan <strong style="color:var(--fi);margin:0 .25rem">12 unidades</strong> · El precio puede subir</div>
+<div style="margin:1.75rem 0">
+  <span class="pwas" style="font-size:1rem">$149.900</span>
+  <div class="pnow" style="font-size:3rem">$99.900</div>
+  <p style="color:var(--mu);font-size:.78rem;margin-top:.3rem">Pago contra entrega · Envío gratis · Garantía 30 días</p>
+</div>
+<button class="btn" onclick="wa('final')" style="width:100%;max-width:460px;justify-content:center;padding:1.35rem;font-size:1.05rem">
+  <svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Pedir por WhatsApp ahora
+</button>
+</div></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="fin">
+  <div><p style="font-family:var(--dp);font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--fi),var(--vi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SLIM BURN PRO ®</p><p style="color:var(--mu);font-size:.7rem;margin-top:2px">EL ORIGINAL · Canal oficial</p></div>
+  <p style="color:var(--mu);font-size:.72rem">© 2025 · Todos los derechos reservados · Colombia</p>
+  <p style="color:var(--mu);font-size:.68rem;max-width:320px;line-height:1.5">*Resultados individuales pueden variar. Los suplementos no reemplazan una dieta equilibrada.</p>
+</div>
+</footer>
+
+<!-- STICKY BAR -->
+<div id="sb">
+<div style="display:flex;align-items:center;gap:.75rem">
+  <div><div style="display:flex;align-items:center;gap:.4rem"><span style="text-decoration:line-through;color:var(--mu);font-size:.76rem">$149.900</span><span style="font-family:var(--dp);font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,var(--fi),var(--go));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$99.900</span></div><span class="cod" style="font-size:.68rem;padding:.3rem .7rem"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Paga en casa</span></div>
+</div>
+<button class="btn bsm" onclick="wa('sbar')"><svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pedir ahora</button>
+</div>
+
+<script>
+/* ══ CAROUSEL CLASS ══ */
+class Car {
+  constructor(track, dots, opts={}) {
+    this.track = track;
+    this.dotsEl = dots;
+    this.orig = Array.from(track.children).map(el => el.cloneNode(true));
+    this.n = this.orig.length;
+    this.vis = opts.vis || 1;
+    this.iv = opts.iv || 5500;
+    this.timer = null;
+    this.cur = this.vis;
+    this.jumping = false;
+    if (!this.n) return;
+
+    this._onTransitionEnd = () => this._onEnd();
+    this._onResize = () => this.go(this.cur, false);
+    this._onEnter = () => clearInterval(this.timer);
+    this._onLeave = () => this.startAuto();
+
+    this.track.addEventListener('transitionend', this._onTransitionEnd);
+    window.addEventListener('resize', this._onResize);
+    this.track.parentElement.addEventListener('mouseenter', this._onEnter);
+    this.track.parentElement.addEventListener('mouseleave', this._onLeave);
+
+    this.addTouch();
+    this.build();
+  }
+
+  build() {
+    clearInterval(this.timer);
+    this.track.innerHTML = '';
+
+    const prevClones = this.orig.slice(-this.vis).map(el => el.cloneNode(true));
+    const realSlides = this.orig.map(el => el.cloneNode(true));
+    const nextClones = this.orig.slice(0, this.vis).map(el => el.cloneNode(true));
+
+    [...prevClones, ...realSlides, ...nextClones].forEach(el => this.track.appendChild(el));
+
+    this.cur = this.vis;
+    this.mkDots();
+
+    requestAnimationFrame(() => {
+      this.go(this.cur, false);
+      this.startAuto();
+    });
+  }
+
+  rebuild(vis) {
+    if (vis) this.vis = vis;
+    this.build();
+  }
+
+  mkDots() {
+    if (!this.dotsEl) return;
+    const cnt = Math.ceil(this.n / this.vis);
+    this.dotsEl.innerHTML = '';
+    for (let i = 0; i < cnt; i++) {
+      const d = document.createElement('button');
+      d.className = 'dot' + (i === 0 ? ' on' : '');
+      d.onclick = () => this.go(this.vis + i * this.vis);
+      this.dotsEl.appendChild(d);
+    }
+  }
+
+  updDots() {
+    if (!this.dotsEl) return;
+    const real = ((this.cur - this.vis) % this.n + this.n) % this.n;
+    const idx = Math.floor(real / this.vis);
+    this.dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === idx));
+  }
+
+  slideWidth() {
+    const viewport = this.track.parentElement;
+    return viewport ? (viewport.clientWidth / this.vis) : 0;
+  }
+
+  go(n, an=true) {
+    this.cur = n;
+    this.track.style.transition = an ? 'transform .75s cubic-bezier(.22,.61,.36,1)' : 'none';
+    this.track.style.transform = `translate3d(-${this.cur * this.slideWidth()}px,0,0)`;
+    this.updDots();
+  }
+
+  _onEnd() {
+    if (this.jumping) return;
+
+    if (this.cur >= this.n + this.vis) {
+      this.jumping = true;
+      this.go(this.vis, false);
+      requestAnimationFrame(() => { this.jumping = false; });
+    } else if (this.cur < this.vis) {
+      this.jumping = true;
+      this.go(this.n + this.cur, false);
+      requestAnimationFrame(() => { this.jumping = false; });
+    }
+  }
+
+  next() { this.go(this.cur + this.vis); this.reset(); }
+  prev() { this.go(this.cur - this.vis); this.reset(); }
+
+  startAuto() {
+    clearInterval(this.timer);
+    this.timer = setInterval(() => this.next(), this.iv);
+  }
+
+  reset() {
+    clearInterval(this.timer);
+    this.startAuto();
+  }
+
+  addTouch() {
+    let sx = null;
+    const el = this.track.parentElement;
+
+    el.addEventListener('touchstart', e => {
+      sx = e.touches[0].clientX;
+    }, { passive: true });
+
+    el.addEventListener('touchend', e => {
+      if (sx === null) return;
+      const dx = sx - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 40) dx > 0 ? this.next() : this.prev();
+      sx = null;
+    }, { passive: true });
+  }
+}
+
+let HC, BC;
+
+/* gradient BGs */
+const HG = [
+  'linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)',
+  'linear-gradient(135deg,#2d1b4e,#1a1a2e,#0f0f1d)',
+  'linear-gradient(135deg,#1e0a0a,#2d1515,#1a1a2e)',
+  'linear-gradient(135deg,#0a1a0f,#0f2a1a,#1a1a2e)',
+  'linear-gradient(135deg,#1a1a2e,#2d1b4e,#16213e)',
+];
+const BAG = [
+  'linear-gradient(135deg,#1a1a2e,#16213e)',
+  'linear-gradient(135deg,#16213e,#1a1a2e)',
+  'linear-gradient(135deg,#0f3460,#16213e)',
+  'linear-gradient(135deg,#2d1b4e,#1a1a2e)',
+  'linear-gradient(135deg,#1e0a0a,#2d1515)',
+  'linear-gradient(135deg,#0a1a0f,#0f2a1a)',
+];
+
+const INGS = [
+  { n:'Actiponin® (AMPK)', d:'El activador del AMPK más estudiado. Clínicamente comprobado para reducir grasa visceral y mejorar composición corporal.', g:'linear-gradient(135deg,#FF6B35,#C850C0)', img:'https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_83_ad9fa49ecb7a--ingredient-Actiponin-1-697c25.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzgzX2FkOWZhNDllY2I3YS0taW5ncmVkaWVudC1BY3RpcG9uaW4tMS02OTdjMjUucG5nIiwiaWF0IjoxNzc2ODc5OTIxLCJleHAiOjE4MDg0MTU5MjF9.j-SeuN4hNzhFyrRE6d7CDMSoBbwIKlteVAtnAIJKsjI' },
+  { n:'Extracto de Té Verde', d:'Potencia la termogénesis natural. Tu cuerpo quema más calorías incluso en reposo sin esfuerzo adicional.', g:'linear-gradient(135deg,#2d7a4a,#1a5c36)', img:'https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_84_ad9fa49ecb7a--ingredient-GreenTeaExtrac-d53fde.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzg0X2FkOWZhNDllY2I3YS0taW5ncmVkaWVudC1HcmVlblRlYUV4dHJhYy1kNTNmZGUucG5nIiwiaWF0IjoxNzc2ODgwMjE4LCJleHAiOjE4MDg0MTYyMTh9.QS9gxZMBfwYcT31l5GOJSWSt30ky1pu_GEYdNxRU44A' },
+  { n:'Vitaminas B6 + B12', d:'Regulan el metabolismo de forma sostenida y combaten la fatiga. Energía mientras quemas grasa.', g:'linear-gradient(135deg,#FFB800,#e67e00)', img:'https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_85_ad9fa49ecb7a--ingredient-VitaminB6-1-729899.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzg1X2FkOWZhNDllY2I3YS0taW5ncmVkaWVudC1WaXRhbWluQjYtMS03Mjk4OTkucG5nIiwiaWF0IjoxNzc2ODc5OTUzLCJleHAiOjE4MDg0MTU5NTN9.wJ69llPiPBrPzZBPlcbznyWejupN4SYv4GzmRCvcPTM' },
+  { n:'Fórmula de absorción', d:'Potencia la biodisponibilidad de todos los ingredientes hasta 2000%. Sin esto, el resto no llega donde debe.', g:'linear-gradient(135deg,#6c3fc5,#4a2c8a)', img:'https://erxxuotslhjluwrlxmyx.supabase.co/storage/v1/object/sign/lemme/imgi_86_ad9fa49ecb7a--ingredient-VitaminsB12-28242a-removebg-preview.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZWQxZTBkNS1mNzcwLTRmMDMtODRhYy1jYTk2YzZkZmM1NDQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJsZW1tZS9pbWdpXzg2X2FkOWZhNDllY2I3YS0taW5ncmVkaWVudC1WaXRhbWluc0IxMi0yODI0MmEtcmVtb3ZlYmctcHJldmlldy5wbmciLCJpYXQiOjE3NzY4Nzk5OTYsImV4cCI6MTgwODQxNTk5Nn0.it23H__mm4d5JfeEJt3wcJ8cz15yHLr8sGhXkkkg5_0' },
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  initPx();
+  buildHC();
+  buildBC();
+  buildIng();
+  buildPlanes();
+  initReveal();
+  initRings();
+  initBars();
+  initSBar();
+  initStock();
+  const vs = [17,21,23,26,29,31,19];
+  const el = document.getElementById('viewers');
+  if (el) el.textContent = vs[Math.floor(Math.random()*vs.length)] + ' personas';
+});
+
+function initPx() {
+  const p = C.PIXEL;
+  if (!p || p === 'TU_PIXEL_ID') return;
+  fbq('init', p);
+  fbq('track', 'PageView');
+  setTimeout(() => fbq('track', 'ViewContent', { content_name:'SLIM BURN PRO', value:99900, currency:'COP' }), 3000);
+}
+
+function wa(src) {
+  const p = C.PIXEL;
+  if (p && p !== 'TU_PIXEL_ID') fbq('track', 'InitiateCheckout', { content_name:'SLIM BURN PRO', value:99900, currency:'COP', num_items:1 });
+  window.open('https://wa.me/' + C.WA_NUM + '?text=' + encodeURIComponent(C.WA_MSG), '_blank');
+}
+
+function initStock() {
+  const numEl = document.getElementById('stockNum');
+  const box = document.getElementById('nstock');
+  if (!numEl) return;
+  let stock = 12;
+  numEl.textContent = stock;
+
+  const tick = () => {
+    if (stock <= 5) return;
+    const delay = 35000 + Math.floor(Math.random() * 55000);
+    setTimeout(() => {
+      stock = Math.max(5, stock - 1);
+      numEl.textContent = stock;
+      if (box) {
+        box.classList.add('stock-flash');
+        setTimeout(() => box.classList.remove('stock-flash'), 700);
+      }
+      if (stock > 5) tick();
+    }, delay);
+  };
+
+  tick();
+}
+
+function buildHC() {
+  const t = document.getElementById('htr');
+  const d = document.getElementById('hdots');
+  C.FOTOS.forEach((url, i) => {
+    const s = document.createElement('div');
+    s.className = 'csl';
+    if (url) {
+      s.innerHTML = `
+        <div class="cslbg" style="background-image:url('${url.replace("'", "\\'")}')"></div>
+        <div class="cslov"></div>
+        <div class="cslm">
+          <img src="${url}" alt="Producto ${i+1}" loading="${i === 0 ? 'eager' : 'lazy'}">
+        </div>`;
+    } else {
+      s.innerHTML = `<div class="cph" style="background:${HG[i]};width:100%;height:100%"><div style="text-align:center"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,rgba(255,107,53,.45),rgba(200,80,192,.3));margin:0 auto 1rem"></div><p style="color:rgba(240,237,248,.35);font-size:.76rem;padding:0 2rem">Imagen del producto ${i+1}<br><span style="opacity:.6">Agrega tu URL en CONFIG</span></p></div></div>`;
+    }
+    t.appendChild(s);
+  });
+  HC = new Car(t, d, { iv: 5500 });
+}
+
+function buildBC() {
+  const t = document.getElementById('btr');
+  const d = document.getElementById('bdots');
+  t.innerHTML = '';
+
+  C.BA.forEach((it, i) => {
+    const s = document.createElement('div');
+    s.className = 'bas';
+    s.innerHTML = `<div class="bac"><div class="bai">${it.img
+      ? `<div class="ba-bg" style="background-image:url('${it.img.replace("'", "\'")}')"></div><div class="ba-ov"></div><div class="ba-media"><img src="${it.img}" alt="Transformación ${i+1}" loading="lazy"></div>`
+      : `<div class="bph" style="background:${BAG[i]};width:100%;height:100%;position:absolute;inset:0"><div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--fi),var(--vi));opacity:.4"></div><p style="color:rgba(240,237,248,.3);font-size:.73rem;text-align:center;padding:0 1.5rem;margin-top:.6rem">Foto antes/después<br>formato 4:5</p></div>`
+    }</div><div class="bin"><div class="stars" style="font-size:.8rem;margin-bottom:.35rem">★★★★★</div><p style="font-weight:700;font-size:.86rem;margin-bottom:.3rem">${it.n} · ${it.c}</p><p style="font-size:.8rem;color:var(--mu);line-height:1.6">"${it.t}"</p></div></div>`;
+    t.appendChild(s);
+  });
+
+  const slides = Array.from(t.children);
+  const perView = () => window.innerWidth >= 901 ? 3 : window.innerWidth >= 601 ? 2 : 1;
+  let group = perView();
+  let scrollTimer;
+  let resizeTimer;
+
+  const pageCount = () => Math.max(1, Math.ceil(slides.length / group));
+  const clampPage = p => Math.max(0, Math.min(p, pageCount() - 1));
+  const slideIndexForPage = p => Math.min(slides.length - 1, clampPage(p) * group);
+
+  function buildDots() {
+    d.innerHTML = '';
+    for (let i = 0; i < pageCount(); i++) {
+      const btn = document.createElement('button');
+      btn.className = 'dot' + (i === 0 ? ' on' : '');
+      btn.type = 'button';
+      btn.addEventListener('click', () => scrollToPage(i));
+      d.appendChild(btn);
+    }
+  }
+
+  function currentPage() {
+    let nearestIndex = 0;
+    let nearestDistance = Infinity;
+    slides.forEach((slide, i) => {
+      const dist = Math.abs(t.scrollLeft - slide.offsetLeft);
+      if (dist < nearestDistance) {
+        nearestDistance = dist;
+        nearestIndex = i;
+      }
+    });
+    return clampPage(Math.floor(nearestIndex / group));
+  }
+
+  function updateDots(active = currentPage()) {
+    d.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('on', i === active));
+  }
+
+  function scrollToPage(page, smooth = true) {
+    const idx = slideIndexForPage(page);
+    const target = slides[idx];
+    if (!target) return;
+    t.scrollTo({ left: target.offsetLeft, behavior: smooth ? 'smooth' : 'auto' });
+    updateDots(clampPage(page));
+  }
+
+  BC = {
+    next() { scrollToPage(currentPage() + 1); },
+    prev() { scrollToPage(currentPage() - 1); }
+  };
+
+  t.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => updateDots(), 80);
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const page = currentPage();
+      group = perView();
+      buildDots();
+      scrollToPage(page, false);
+    }, 150);
+  });
+
+  buildDots();
+  requestAnimationFrame(() => scrollToPage(0, false));
+}
+
+function buildIng() {
+  const g = document.getElementById('igrid');
+  INGS.forEach(it => {
+    const c = document.createElement('div');
+    c.className = 'ic rv';
+    c.innerHTML = `<div class="iico" style="background:${it.g}">${it.img ? `<img src="${it.img}" alt="${it.n}" loading="lazy">` : ''}</div><h4 style="font-weight:700;margin-bottom:.5rem;font-size:.93rem">${it.n}</h4><p style="color:var(--mu);font-size:.84rem;line-height:1.65">${it.d}</p>`;
+    g.appendChild(c);
+  });
+  initReveal();
+}
+
+function buildPlanes() {
+  const g = document.getElementById('pgrid');
+  const classes = ['pc pc-l', 'pc pc-c', 'pc pc-r'];
+  const glowCols = ['rgba(255,107,53,.45)', 'rgba(255,107,53,.65)', 'rgba(255,184,0,.5)'];
+  const capCols  = ['#C850C0','#FF6B35','#FFB800'];
+  const bodyGrads = [
+    'linear-gradient(135deg,#2a1a3e,#1a1a2e)',
+    'linear-gradient(135deg,#3d1200,#2a0a00)',
+    'linear-gradient(135deg,#2a1f00,#1a1800)',
+  ];
+
+  const chk = `<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>`;
+  const houseIco = `<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`;
+  const truckIco = `<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`;
+
+  C.PLANES.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = classes[i] + ' rv';
+
+    // Build visual — one image per plan
+    let bottlesHTML = '';
+
+    if (p.img) {
+      const shotClass = i === 1 ? 'plan-shot plan-shot-featured' : 'plan-shot';
+      bottlesHTML = `<div class="${shotClass}"><img src="${p.img}" class="bottle" alt="SLIM BURN PRO ${p.frascos} ${p.frascos === 1 ? 'frasco' : 'frascos'}"></div>`;
+    } else {
+      bottlesHTML = `
+      <div class="plan-shot">
+        <div style="display:flex;align-items:center;justify-content:center;padding:1.25rem 0;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.01));min-height:160px">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:150px;width:62px;position:relative">
+            <div style="width:30px;height:14px;border-radius:4px 4px 0 0;background:linear-gradient(135deg,${capCols[i]},rgba(255,107,53,.7));flex-shrink:0"></div>
+            <div style="width:48px;flex:1;border-radius:6px 6px 10px 10px;background:linear-gradient(180deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center">
+              <div style="width:32px;height:46px;border-radius:4px;background:${bodyGrads[i]};border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px">
+                <div style="width:22px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--fi),var(--vi));opacity:.8"></div>
+                <div style="width:16px;height:2px;border-radius:2px;background:rgba(255,255,255,.3)"></div>
+                <div style="width:16px;height:2px;border-radius:2px;background:rgba(255,255,255,.2)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    const featIcon = i === 0 ? '→ Prueba y descubre' : i === 1 ? '→ Resultados completos' : '→ Máxima transformación';
+
+    card.innerHTML = `
+      <!-- stage con botella(s) -->
+      <div class="pstage">
+        <div class="pstage-glow" style="background:radial-gradient(circle,${glowCols[i]},transparent 70%)"></div>
+        <div class="bottles">${bottlesHTML}</div>
+      </div>
+
+      <!-- body -->
+      <div class="pbody">
+        ${p.tag ? `<div class="ptag2">${p.tag}</div>` : '<div class="ptag2-empty"></div>'}
+
+        <div class="pmeses">${p.meses}</div>
+        <p class="pmeses-lbl">${p.meses === 1 ? 'mes de tratamiento' : 'meses de tratamiento'} · ${p.frascos} ${p.frascos === 1 ? 'frasco' : 'frascos'}</p>
+        <p class="pppu">${p.ppu}</p>
+
+        <div class="pwas2">${p.antes}</div>
+        <div class="pprice">${p.precio}</div>
+        <div class="psave">Ahorras ${p.ahorra}</div>
+
+        <ul class="pfeats">
+          <li><div class="pfi2">${houseIco}</div><span>Paga en casa al recibir</span></li>
+          <li><div class="pfi2">${truckIco}</div><span>Envío gratis a Colombia</span></li>
+          <li><div class="pfi2"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Garantía 30 días</span></li>
+          <li style="color:var(--fi);font-weight:600;font-size:.8rem">${featIcon}</li>
+        </ul>
+
+        <button class="btn bfl ${i !== 1 ? 'bol' : ''}" onclick="wa('plan${p.meses}')" style="${i === 1 ? '' : 'margin-top:auto'}">
+          <svg class="wai" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir ${p.meses} ${p.meses === 1 ? 'mes' : 'meses'}
+        </button>
+      </div>`;
+    g.appendChild(card);
+  });
+  initReveal();
+}
+
+function initReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }});
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rv:not(.in)').forEach(el => obs.observe(el));
+}
+
+function initRings() {
+  const C_ = 2 * Math.PI * 54; // ~339.3
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const card = e.target;
+      const ring = card.querySelector('.rf');
+      if (ring) {
+        const pct = parseFloat(ring.getAttribute('data-p')) / 100;
+        setTimeout(() => { ring.style.strokeDashoffset = C_ * (1 - pct); }, 100);
+      }
+      const cnt = card.querySelector('[data-n]');
+      if (cnt) {
+        const tgt = parseInt(cnt.getAttribute('data-n'));
+        const fmt = cnt.getAttribute('data-f');
+        let s = null; const dur = 2400;
+        const tick = ts => {
+          if (!s) s = ts;
+          const p = Math.min((ts - s) / dur, 1);
+          const v = Math.floor((1 - Math.pow(1-p, 3)) * tgt);
+          cnt.textContent = fmt === 'rat' ? (v/10).toFixed(1) : fmt === 'pct' ? v + '%' : v === tgt && fmt === 'wk' ? v : v.toLocaleString('es-CO');
+          if (p < 1) requestAnimationFrame(tick);
+          else cnt.textContent = fmt === 'rat' ? (tgt/10).toFixed(1) : fmt === 'pct' ? tgt + '%' : fmt === 'wk' ? tgt : tgt.toLocaleString('es-CO');
+        };
+        requestAnimationFrame(tick);
+      }
+      obs.unobserve(card);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.sc').forEach(el => obs.observe(el));
+}
+
+function initBars() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.pfill').forEach(f => f.style.width = f.getAttribute('data-w') + '%');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.sh').forEach(el => obs.observe(el));
+}
+
+function fq(b) {
+  const it = b.closest('.fi'); const fd = it.querySelector('.fd'); const op = it.classList.contains('op');
+  document.querySelectorAll('.fi.op').forEach(i => { i.classList.remove('op'); i.querySelector('.fd').classList.remove('op'); });
+  if (!op) { it.classList.add('op'); fd.classList.add('op'); }
+}
+
+function initSBar() {
+  const bar = document.getElementById('sb');
+  window.addEventListener('scroll', () => { bar.style.transform = window.scrollY > 500 ? 'translateY(0)' : 'translateY(110%)'; }, { passive: true });
+}
+</script>
+</body>
+</html>
